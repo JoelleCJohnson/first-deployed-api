@@ -10,8 +10,8 @@ app.use(express.json())
 
 app.get("/test", (req, res) => res.send("It is working!"))
 
-app.post("/", addCoffee)
-app.get("/", getAllCoffees)
+app.get("/coffees", getAllCoffees)
+app.post("/coffees", addCoffee)
 
 export const api = onRequest(app) 
 /* ^ must be what is put in the function key in the firebase.json file. 
